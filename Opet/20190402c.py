@@ -47,3 +47,9 @@ sl = lambda x,y: x + y
 print(soma(5,10))
 print(sl(5,10))
     
+
+print('\nExemplo 14')
+
+p = lambda x : x%2
+if p(2):
+    print('oi')
