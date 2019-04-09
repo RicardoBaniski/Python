@@ -44,7 +44,7 @@ class Emprestimo2:
         return self.v*(taxa/100)
 
     def total(self, taxa):
-        pass
+        return self.v + self.juros(taxa)
 
 
 e1 = Emprestimo2()
