@@ -1,0 +1,42 @@
+Entregar script Python (xadrez.py) no e-mail diego.cardoso@opet.edu.br até dia 09/04 as 23:59, com o assunto:
+
+Atividade 1 de Python.
+
+Entrega Individual.
+Cópias serão desconsideradas.
+Na primeira linha do Script deve ter um comentário com o nome e código do aluno.
+
+Ex:
+#Diego Cardoso 9999999999
+
+Campeonato de Xadrez: 
+Criar um programa Python que cadastre participantes em um campeonato de Xadrez. 
+
+Cada categoria pode ter até 16 inscritos. 
+As categorias são: 
+Infantil -> 8 até 12 anos 
+Juvenil -> 13 até 17 anos 
+Adulto -> Acima de 18 anos 
+
+O menu deverá ser composto de: 
+1. Registrar um participante. 
+2. Verificar Chave do torneio. 
+
+Caso o usuário opte por registrar um participante, deve ser solicitado 
+1. Nome 
+2. Idade 
+
+Só poderá registrar um participante caso exista vaga disponível. 
+Deverá ser informado que as vagas foram completamente preenchidas ao tentar registrar um usuário em uma categoria já preenchida. 
+Não é necessário armazenar a idade do participante, somente seu nome. 
+
+Caso o usuário opte por verificar uma chave, deve ser solicitado 
+1. Categoria 
+
+Caso a categoria não esteja completamente preenchida, deverá ser exibida uma mensagem dizendo que o registro ainda está aberto, 
+senão deverá ser exibida as partidas no formato: 
+Partida N: Pi x Pj 
+Onde N é o número da partida e Pi, Pj são jogadores aleatórios. 
+
+O primeiro chaveamento deve ser aleatório, caso o usuário solicite verificar a chave da mesma categoria novamente, 
+deverá ser exibido o mesmo pareamento.
