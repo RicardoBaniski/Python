@@ -12,7 +12,7 @@ class Triangulo:
 
 t1 = Triangulo(20, 20)  # b, h
 t2 = Triangulo(15)      # b
-t3 = Triangulo(h=30)  # h
+t3 = Triangulo(h=30)    # h
 t4 = Triangulo()        # NENHUM
 print(t1.area())
 print(t2.area())
