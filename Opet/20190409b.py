@@ -19,7 +19,7 @@ print(t2.area())
 print(t3.area())
 print(t4.area())
 
-print('\nEMPRESTIMO')
+print('\nEMPRESTIMO_01')
 
 
 class Emprestimo:
@@ -35,6 +35,7 @@ e2 = Emprestimo(500)
 print(e1.juros(20))  # 2000
 print(e2.juros(10))  # 50.0
 
+print('EMPRESTIMO_02')
 
 class Emprestimo2:
     def __init__(self, v=10000):
