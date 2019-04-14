@@ -35,6 +35,8 @@ e2 = Emprestimo(500)
 print(e1.juros(20))  # 2000
 print(e2.juros(10))  # 50.0
 
+
+
 print('EMPRESTIMO_02')
 
 class Emprestimo2:
