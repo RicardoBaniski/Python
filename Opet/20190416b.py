@@ -21,6 +21,6 @@ f1 = Funcionario('Pablo', 30, 2700.00)
 f2 = Funcionario('Ana', 23, 3000.00)
 p1 = Pessoa('Carlos', 37)
 
-print(f1)       #
-print(f2)       #
-print(p1)       #
+print(f1)       # Pablo 30 2700.00
+print(f2)       # Ana 23 3000.00
+print(p1)       # Carlos 37
