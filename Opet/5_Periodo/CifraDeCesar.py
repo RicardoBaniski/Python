@@ -1,4 +1,4 @@
-class Cifer(object):
+class Cifra(object):
 
     def __init__(self):
         self._alfabeto = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz '
@@ -25,15 +25,15 @@ class Cifer(object):
 
 
 if __name__ == '__main__':
-    cifer = Cifer()
+    cifra = Cifra()
     chave = int(input('\nInsira a chave: '))
     mensagem = input('Insera a mensagem: ')
-    forma = input(
+    modo = input(
         '\nPara:\n- CODIFICAR: Tecle [C]\n- DECODIFICAR: Apenas [ENTER]\n\nOpção: ')
 
-    if forma == 'c' or forma == 'C':
-        c = cifer.criptografar(mensagem, chave)
+    if modo == 'c' or modo == 'C':
+        c = cifra.criptografar(mensagem, chave)
         print(c, '\n')
     else:
-        dc = cifer.descriptografar(mensagem, chave)
+        dc = cifra.descriptografar(mensagem, chave)
         print(dc, '\n')
