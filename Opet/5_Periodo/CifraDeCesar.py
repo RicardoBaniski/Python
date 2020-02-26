@@ -29,11 +29,11 @@ if __name__ == '__main__':
     chave = int(input('\nInsira a chave: '))
     mensagem = input('Insera a mensagem: ')
     modo = input(
-        '\nPara:\n- CODIFICAR: Tecle [C]\n- DECODIFICAR: Apenas [ENTER]\n\nOpção: ')
+        '\nPara:\n- CODIFICAR: Tecle [C] ou [c]\n- DECODIFICAR: Apenas [ENTER]\n\nOpção: ')
 
     if modo == 'c' or modo == 'C':
         c = cifra.criptografar(mensagem, chave)
-        print(c, '\n')
+        print('\nTexto:', c, '\n')
     else:
         dc = cifra.descriptografar(mensagem, chave)
-        print(dc, '\n')
+        print('\nTexto:', dc, '\n')
