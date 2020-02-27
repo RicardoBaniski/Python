@@ -9,8 +9,8 @@ class Cifra(object):
         for caractere in texto:
             if caractere in self._alfabeto:
                 index = self._alfabeto.find(caractere) + chave
-                if index >= 53:
-                    index -= 53
+                if index >= len(self._alfabeto):
+                    index -= len(self._alfabeto)
                 texto_criptografado += self._alfabeto[index]
         return texto_criptografado
 
@@ -37,3 +37,5 @@ if __name__ == '__main__':
     else:
         dc = cifra.descriptografar(mensagem, chave)
         print('\nTexto:', dc, '\n')
+   
+    
