@@ -36,7 +36,9 @@ def opc():
         print('\nTexto Codificado:', c, '\n')
     elif (x == 2):
         dc = descriptografar(alfabeto, mensagem, chave)
-        print('\nTexto Decodificado:', dc, '\n')   
+        print('\nTexto Decodificado:', dc, '\n') 
+    else:
+        print('\nOpção inválida') 
     menu()
 
 menu()
