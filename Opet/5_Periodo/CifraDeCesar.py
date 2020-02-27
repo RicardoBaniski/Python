@@ -1,41 +1,42 @@
-class Cifra(object):
+alfabeto = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz '
 
-    def __init__(self):
-        self._alfabeto = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz '
+def criptografar(alfabeto, texto, chave):
+    texto_criptografado = ''
 
-    def criptografar(self, texto, chave):
-        texto_criptografado = ''
+    for caractere in texto:
+        if caractere in alfabeto:
+            index = alfabeto.find(caractere) + chave
+            if index >= len(alfabeto):
+                index -= len(alfabeto)
+            texto_criptografado += alfabeto[index]
+    return texto_criptografado
 
-        for caractere in texto:
-            if caractere in self._alfabeto:
-                index = self._alfabeto.find(caractere) + chave
-                if index >= len(self._alfabeto):
-                    index -= len(self._alfabeto)
-                texto_criptografado += self._alfabeto[index]
-        return texto_criptografado
+def descriptografar(alfabeto, texto_criptogradado, chave):
+    texto = ''
 
-    def descriptografar(self, texto_criptogradado, chave):
-        texto = ''
+    for caractere in texto_criptogradado:
+        if caractere in alfabeto:
+            index = alfabeto.find(caractere) - chave
+            texto += alfabeto[index]
+    return texto
 
-        for caractere in texto_criptogradado:
-            if caractere in self._alfabeto:
-                index = self._alfabeto.find(caractere) - chave
-                texto += self._alfabeto[index]
-        return texto
+def menu():
+    print('')
+    print('Selecione uma opção:')
+    print('1 - Codificar')
+    print('2 - Decodificar')
+    opc()
 
-
-if __name__ == '__main__':
-    cifra = Cifra()
+def opc():
     chave = int(input('\nInsira a chave: '))
-    mensagem = input('Insera a mensagem: ')
-    modo = input(
-        '\nPara:\n- CODIFICAR: Tecle [C] ou [c]\n- DECODIFICAR: Apenas [ENTER]\n\nOpção: ')
+    mensagem = input('Insira a mensagem: ')
+    x = int(input('\nOpção: '))
+    if(x == 1):
+        c = criptografar(alfabeto, mensagem, chave)
+        print('\nTexto Codificado:', c, '\n')
+    elif (x == 2):
+        dc = descriptografar(alfabeto, mensagem, chave)
+        print('\nTexto Decodificado:', dc, '\n')   
+    menu()
 
-    if modo == 'c' or modo == 'C':
-        c = cifra.criptografar(mensagem, chave)
-        print('\nTexto:', c, '\n')
-    else:
-        dc = cifra.descriptografar(mensagem, chave)
-        print('\nTexto:', dc, '\n')
-   
-    
+menu()
