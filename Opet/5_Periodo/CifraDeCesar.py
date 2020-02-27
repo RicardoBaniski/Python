@@ -1,3 +1,5 @@
+#RICARDO BANISKI - 1201800164
+
 alfabeto = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz '
 
 def criptografar(alfabeto, texto, chave):
