@@ -22,7 +22,7 @@ def descriptografar(alfabeto, texto_criptogradado, chave):
             texto += alfabeto[index]
     return texto
 
-def menu():
+def main():
     print('')
     print('Selecione uma opção:')
     print('1 - Codificar')
@@ -35,12 +35,13 @@ def opc():
     x = int(input('\nOpção: '))
     if(x == 1):
         c = criptografar(alfabeto, mensagem, chave)
-        print('\nTexto Codificado:', c, '\n')
+        print('Texto Codificado: "',c,'"')
     elif (x == 2):
         dc = descriptografar(alfabeto, mensagem, chave)
-        print('\nTexto Decodificado:', dc, '\n') 
+        print('Texto Decodificado: "',dc,'"') 
     else:
         print('\nOpção inválida') 
-    menu()
+    main()
 
-menu()
+if __name__ == "__main__":
+    main()
